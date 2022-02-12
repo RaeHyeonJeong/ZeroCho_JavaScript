@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <span id="order">1</span>번째 참가자
+    </div>
+    <div>제시어:
+        <span id="word"></span>
+    </div>
+    <input type="text">
+    <button class="btn">입력</button>
+
+    <script>
+        const number = parseInt(prompt("몇 명이 참가하나요? "));
+        alert(number);
+
+        const yesOrno = confirm('맞나요 ? ');
+        console.log(yesOrno);
+
+        // 태그 선택자 # -> id값
+        // 태그 선택자 . -> class값
+
+        document.querySelector('#word');
+        document.querySelector('.btn');
+
+
+
+        // input 태그에 글자가 입력되면 input 이벤트 발생때마다<addEventListener> console.log로 입력된 글씨출력<event.target.value>
+        document.querySelector('input').addEventListener('input', function (event) {
+            console.log('글자 입력', event.target.value);
+        });
+
+
+
+        // 버튼 클릭 함수 <버튼 클릭시 console.log로 '버튼 클릭' 메세지 출력 >
+        const onClick = function () {
+            console.log('버튼 클릭');
+        }
+
+
+        //버튼 클릭 이벤트 발생할때마다 click 이벤트 발생때마다 클릭메세지 출력<위의 onClick 함수를 사용>
+        document.querySelector('.btn').addEventListener('click', onClick);
+    </script>
+</body>
+
+</html>
